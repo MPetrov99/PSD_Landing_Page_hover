@@ -347,10 +347,10 @@ html {
     margin: 0 auto;
     padding: 0 1.5rem;
     display: grid;
-    row-gap: 30px;
-    column-gap: 100px;
+    row-gap: 200px;
+    column-gap: 150px;
     grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 150px;
+    margin-top: 300px;
 }
 
 .terminals_message {
@@ -394,23 +394,101 @@ html {
     display: flex;
     justify-content: end;
     flex-direction: column;
+    position: relative;
 }
 
-.phone1 img {
+.phone1_1 {
     transition: background-color 400ms;
-    transition: 0.5s;
     cursor: pointer;
+    transition: 1s;
 }
 
-.phone1 img:hover {
-    filter: contrast(140%);
-    transform: scale(1.05);
+.phone1_container {
+    display: flex;
+    justify-content: center;
 }
 
-.phone1 p {
+.phone1 p.description_phone1 {
     font-size: 30px;
     color: #7e7c7c;
+    text-align: center;
+}
+
+.phone1_bg {
+    position: absolute;
+    z-index: -10;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.phone1_container:hover img.phone1_1 {
+    transform: rotate(-10deg);
+    filter: contrast(140%);
+}
+
+.phone1_container:hover img.phone1_bg {
+    opacity: 1;
+}
+
+.price_phone1 {
+    background-image: linear-gradient(#09bad4, #3c8cff);
+    position: absolute;
+    top: -15%;
+    left: 68%;
+    border-radius: 50px 50px 50px 0px;
+    z-index: 10;
+}
+
+.price_phone1 p {
+    color: white;
+    padding: 20px;
+    margin: 0;
+    font-size: 25px;
+}
+
+.price_phone1 span {
+    font-size: 10px;
+    display: block;
+}
+
+.tooltip_phone1 {
+    position: absolute;
+    border-radius: 7px;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+}
+
+.tooltip_phone1::before {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -70px;
+    border-width: 30px;
+    border-style: solid;
+    filter: drop-shadow(0px 4px 4px rgba(130, 130, 130, 1));
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+}
+
+.tooltip_phone1 p {
+    font-size: 20px;
+    color: #7e7c7c;
     padding-left: 30px;
+    padding-right: 30px;
+}
+
+.tooltip_phone1 p.title_phone1 {
+    color: #048ef8;
+}
+
+.phone1:hover .tooltip_phone1 {
+    top: -220px;
+    visibility: visible;
+    opacity: 1;
 }
 
 
@@ -420,23 +498,101 @@ html {
     display: flex;
     justify-content: end;
     flex-direction: column;
+    position: relative;
 }
 
-.phone2 img {
+.phone2_2 {
     transition: background-color 400ms;
-    transition: 0.5s;
+    transition: 1s;
     cursor: pointer;
 }
 
-.phone2 img:hover {
-    filter: contrast(140%);
-    transform: scale(1.05);
+.phone2_container {
+    display: flex;
+    justify-content: center;
 }
 
-.phone2 p {
+.phone2 p.description_phone2 {
     font-size: 30px;
-    padding-left: 80px;
     color: #7e7c7c;
+    text-align: center;
+}
+
+.phone2_bg {
+    position: absolute;
+    z-index: -10;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.phone2_container:hover img.phone2_2 {
+    transform: rotate(-10deg);
+    filter: contrast(140%);
+}
+
+.phone2_container:hover img.phone2_bg {
+    opacity: 1;
+}
+
+.price_phone2 {
+    background-image: linear-gradient(#09bad4, #3c8cff);
+    position: absolute;
+    top: -7%;
+    left: 70%;
+    border-radius: 50px 50px 50px 0px;
+    z-index: 10;
+}
+
+.price_phone2 p {
+    color: white;
+    padding: 20px;
+    margin: 0;
+    font-size: 25px;
+}
+
+.price_phone2 span {
+    font-size: 10px;
+    display: block;
+}
+
+.tooltip_phone2 {
+    position: absolute;
+    border-radius: 7px;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+}
+
+.tooltip_phone2::before {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -70px;
+    border-width: 30px;
+    border-style: solid;
+    filter: drop-shadow(0px 4px 4px rgba(130, 130, 130, 1));
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+}
+
+.tooltip_phone2 p {
+    font-size: 20px;
+    color: #7e7c7c;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.tooltip_phone2 p.title_phone2 {
+    color: #048ef8;
+}
+
+.phone2:hover .tooltip_phone2 {
+    top: -200px;
+    visibility: visible;
+    opacity: 1;
 }
 
 
@@ -446,23 +602,101 @@ html {
     display: flex;
     justify-content: end;
     flex-direction: column;
+    position: relative;
 }
 
-.phone3 img {
+.phone3_3 {
     transition: background-color 400ms;
-    transition: 0.5s;
+    transition: 1s;
     cursor: pointer;
 }
 
-.phone3 img:hover {
-    filter: contrast(140%);
-    transform: scale(1.05);
+.phone3_container {
+    display: flex;
+    justify-content: center;
 }
 
-.phone3 p {
+.phone3 p.description_phone3 {
     font-size: 30px;
     color: #7e7c7c;
+    text-align: center;
+}
+
+.phone3_bg {
+    position: absolute;
+    z-index: -10;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.phone3_container:hover img.phone3_3 {
+    transform: rotate(-10deg);
+    filter: contrast(140%);
+}
+
+.phone3_container:hover img.phone3_bg {
+    opacity: 1;
+}
+
+.price_phone3 {
+    background-image: linear-gradient(#09bad4, #3c8cff);
+    position: absolute;
+    top: -16%;
+    left: 73%;
+    border-radius: 50px 50px 50px 0px;
+    z-index: 10;
+}
+
+.price_phone3 p {
+    color: white;
+    padding: 20px;
+    margin: 0;
+    font-size: 25px;
+}
+
+.price_phone3 span {
+    font-size: 10px;
+    display: block;
+}
+
+.tooltip_phone3 {
+    position: absolute;
+    border-radius: 7px;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+}
+
+.tooltip_phone3::before {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -70px;
+    border-width: 30px;
+    border-style: solid;
+    filter: drop-shadow(0px 4px 4px rgba(130, 130, 130, 1));
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+}
+
+.tooltip_phone3 p {
+    font-size: 20px;
+    color: #7e7c7c;
     padding-left: 30px;
+    padding-right: 30px;
+}
+
+.tooltip_phone3 p.title_phone3 {
+    color: #048ef8;
+}
+
+.phone3:hover .tooltip_phone3 {
+    top: -220px;
+    visibility: visible;
+    opacity: 1;
 }
 
 
@@ -472,23 +706,101 @@ html {
     display: flex;
     justify-content: end;
     flex-direction: column;
+    position: relative;
 }
 
-.phone4 img {
+.phone4_4 {
     transition: background-color 400ms;
-    transition: 0.5s;
+    transition: 1s;
     cursor: pointer;
 }
 
-.phone4 img:hover {
-    filter: contrast(140%);
-    transform: scale(1.05);
+.phone4_container {
+    display: flex;
+    justify-content: center;
 }
 
-.phone4 p {
+.phone4 p.description_phone4 {
     font-size: 30px;
     color: #7e7c7c;
-    padding-left: 50px;
+    text-align: center;
+}
+
+.phone4_bg {
+    position: absolute;
+    z-index: -10;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.phone4_container:hover img.phone4_4 {
+    transform: rotate(-10deg);
+    filter: contrast(140%);
+}
+
+.phone4_container:hover img.phone4_bg {
+    opacity: 1;
+}
+
+.price_phone4 {
+    background-image: linear-gradient(#09bad4, #3c8cff);
+    position: absolute;
+    top: -10%;
+    left: 73%;
+    border-radius: 50px 50px 50px 0px;
+    z-index: 10;
+}
+
+.price_phone4 p {
+    color: white;
+    padding: 20px;
+    margin: 0;
+    font-size: 25px;
+}
+
+.price_phone4 span {
+    font-size: 10px;
+    display: block;
+}
+
+.tooltip_phone4 {
+    position: absolute;
+    border-radius: 7px;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+}
+
+.tooltip_phone4::before {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -70px;
+    border-width: 30px;
+    border-style: solid;
+    filter: drop-shadow(0px 4px 4px rgba(130, 130, 130, 1));
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+}
+
+.tooltip_phone4 p {
+    font-size: 20px;
+    color: #7e7c7c;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.tooltip_phone4 p.title_phone4 {
+    color: #048ef8;
+}
+
+.phone4:hover .tooltip_phone4 {
+    top: -190px;
+    visibility: visible;
+    opacity: 1;
 }
 
 
@@ -498,47 +810,101 @@ html {
     display: flex;
     justify-content: end;
     flex-direction: column;
+    position: relative;
 }
 
-.phone5 img {
+.phone5_5 {
     transition: background-color 400ms;
-    transition: 0.5s;
+    transition: 1s;
     cursor: pointer;
 }
 
-.phone5 img:hover {
-    filter: contrast(140%);
-    transform: scale(1.05);
-}
-
-.phone5 p {
-    font-size: 30px;
-    color: #7e7c7c;
-    padding-left: 60px;
-}
-
-
-/* Lightbox */
-
-#lightbox {
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: none;
-}
-
-#lightbox.active {
+.phone5_container {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
-#lightbox img {
-    border: 2px solid white;
-    background-color: rgba(0, 0, 0, 0.7);
+.phone5 p.description_phone5 {
+    font-size: 30px;
+    color: #7e7c7c;
+    text-align: center;
+}
+
+.phone5_bg {
+    position: absolute;
+    z-index: -10;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.phone5_container:hover img.phone5_5 {
+    transform: rotate(-10deg);
+    filter: contrast(140%);
+}
+
+.phone5_container:hover img.phone5_bg {
+    opacity: 1;
+}
+
+.price_phone5 {
+    background-image: linear-gradient(#09bad4, #3c8cff);
+    position: absolute;
+    top: 8%;
+    left: 71%;
+    border-radius: 50px 50px 50px 0px;
+    z-index: 10;
+}
+
+.price_phone5 p {
+    color: white;
+    padding: 20px;
+    margin: 0;
+    font-size: 25px;
+}
+
+.price_phone5 span {
+    font-size: 10px;
+    display: block;
+}
+
+.tooltip_phone5 {
+    position: absolute;
+    border-radius: 7px;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+}
+
+.tooltip_phone5::before {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -70px;
+    border-width: 30px;
+    border-style: solid;
+    filter: drop-shadow(0px 4px 4px rgba(130, 130, 130, 1));
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+}
+
+.tooltip_phone5 p {
+    font-size: 20px;
+    color: #7e7c7c;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.tooltip_phone5 p.title_phone5 {
+    color: #048ef8;
+}
+
+.phone5:hover .tooltip_phone5 {
+    top: -110px;
+    visibility: visible;
+    opacity: 1;
 }
 
 
@@ -636,9 +1002,60 @@ footer svg {
     }
 }
 
+@media screen and (max-width: 1390px) {
+    .terminals_container {
+        column-gap: 0;
+    }
+    .price_phone1 {
+        left: 65%;
+    }
+    .price_phone2 {
+        left: 66%;
+    }
+    .price_phone3 {
+        left: 68%;
+    }
+    .price_phone4 {
+        left: 68%;
+    }
+    .price_phone5 {
+        left: 66%;
+    }
+}
+
 @media screen and (max-width: 1300px) {
     .list_box {
         flex-basis: 48%;
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .terminals_container {
+        grid-template-columns: 1fr 1fr;
+        max-width: 50rem;
+        row-gap: 250px;
+    }
+    .terminals_message {
+        align-items: center;
+        text-align: center;
+    }
+    .price_phone2 {
+        top: 0;
+    }
+    .phone2:hover .tooltip_phone2 {
+        top: -160px;
+    }
+    .price_phone4 {
+        top: -17%;
+    }
+    .phone4:hover .tooltip_phone4 {
+        top: -230px;
+    }
+    .price_phone5 {
+        top: 5%;
+    }
+    .phone5:hover .tooltip_phone5 {
+        top: -130px;
     }
 }
 
@@ -656,20 +1073,8 @@ footer svg {
 }
 
 @media screen and (max-width: 1040px) {
-    .terminals_container {
-        grid-template-columns: 1fr 1fr;
-        row-gap: 60px;
-        max-width: 50rem;
-    }
     .landing_message_container img {
         margin: 50px 0;
-    }
-    .terminals_message {
-        align-items: center;
-        text-align: center;
-    }
-    .phone2 {
-        justify-content: center;
     }
 }
 
@@ -715,7 +1120,7 @@ footer svg {
         margin-top: 15px;
     }
     .terminals_container {
-        margin-top: 75px;
+        margin-top: 220px;
     }
     .benefits {
         margin-bottom: 60px;
@@ -725,6 +1130,24 @@ footer svg {
     }
     #lightbox img {
         height: 350px;
+    }
+}
+
+@media screen and (max-width: 755px) {
+    .tooltip_phone1 p {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .tooltip_phone3 p {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .tooltip_phone5 p {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .tooltip_phone5 {
+        margin-left: 15px;
     }
 }
 
@@ -739,11 +1162,62 @@ footer svg {
     .terminals_container {
         grid-template-columns: 1fr;
         max-width: 20rem;
+        margin-top: 0;
     }
     .terminals_message h5 {
         font-size: 32px;
         font-weight: bold;
         margin-bottom: 75px;
+    }
+    .tooltip_phone1 p {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .tooltip_phone3 p {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .tooltip_phone5 p {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .phone1:hover .tooltip_phone1 {
+        left: -30px;
+    }
+    .price_phone1 {
+        left: 71%;
+    }
+    .phone2:hover .tooltip_phone2 {
+        left: -35px;
+        top: -230px;
+    }
+    .price_phone2 {
+        left: 75%;
+        top: -20%;
+    }
+    .phone3:hover .tooltip_phone3 {
+        left: -35px;
+        top: -230px;
+    }
+    .price_phone3 {
+        left: 75%;
+        top: -17%;
+    }
+    .phone4:hover .tooltip_phone4 {
+        left: -35px;
+        top: -230px;
+    }
+    .price_phone4 {
+        left: 75%;
+        top: -17%;
+    }
+    .phone5:hover .tooltip_phone5 {
+        left: -35px;
+        top: -230px;
+    }
+    .price_phone5 {
+        left: 75%;
+        top: -23%;
     }
 }
 
@@ -784,8 +1258,9 @@ footer svg {
         font-size: 14px;
         font-weight: bold;
     }
-    .terminals_container img {
-        width: 250px;
+    .phone1:hover .tooltip_phone1 {
+        left: -40px;
+        top: -230px;
     }
 }
 
@@ -795,6 +1270,27 @@ footer svg {
     }
     .benefits h2 {
         font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .phone1:hover .tooltip_phone1 {
+        left: -30px;
+    }
+    .phone2:hover .tooltip_phone2 {
+        left: -30px;
+    }
+    .phone3:hover .tooltip_phone3 {
+        left: -30px;
+    }
+    .phone4:hover .tooltip_phone4 {
+        left: -30px;
+    }
+    .phone5:hover .tooltip_phone5 {
+        left: -30px;
+    }
+    .terminals_container {
+        padding: 0;
     }
 }
 
@@ -816,6 +1312,24 @@ footer svg {
     }
     .benefits_container p {
         margin: 3px;
+    }
+    .phone1:hover .tooltip_phone1 {
+        left: 0;
+    }
+    .phone2:hover .tooltip_phone2 {
+        left: 0;
+    }
+    .phone3:hover .tooltip_phone3 {
+        left: 0;
+    }
+    .phone4:hover .tooltip_phone4 {
+        left: 0;
+    }
+    .phone5:hover .tooltip_phone5 {
+        left: 0;
+    }
+    .terminals_container {
+        margin: 0 10px;
     }
 }
 
